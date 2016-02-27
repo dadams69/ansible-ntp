@@ -1,0 +1,9 @@
+---
+# tasks file for ansible-ntp
+
+- name: install ntp
+  yum: name=ntp state=present
+
+- name: start and enable ntpd
+  service: name=ntpd state=started enabled=yes
+
