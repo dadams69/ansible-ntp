@@ -8,5 +8,5 @@
   yum: name=openntp state=present
 
 - name: start and enable ntpd
-  service: name=ntpd state=started enabled=yes
+  service: name=openntpd state=started enabled=yes
 
