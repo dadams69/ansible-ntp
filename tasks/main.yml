@@ -1,6 +1,15 @@
 ---
 # tasks file for ansible-ntp
 
+- name: remove sendmail
+  yum: name=sendmail state=absent
+
+- name: install postfix
+  yum: name=postfix state=present
+
+- name: start and enable postfix
+  service: name=postfix state=started enabled=yes
+
 - name: remove ntp
   yum: name=ntp state=absent
 
