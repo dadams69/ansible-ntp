@@ -34,7 +34,7 @@ GPLv3
 Author Information
 ------------------
 
-forked from Mark Mercado <mamercad@umflint.edu>
+Forked from Mark Mercado <mamercad@umflint.edu>
 
 Changes made from Don Adams <dadams@nexvortex.com>
 
