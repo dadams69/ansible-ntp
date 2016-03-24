@@ -1,7 +1,7 @@
 galaxy_info:
-  author: Mark Mercado
-  description: Sets up NTP on RHEL/CentOS
-  company: University of Michigan-Flint
+  author: Mark Mercado and Don Adams
+  description: Removes Openntp and Sets up NTP on RHEL/CentOS
+  company: NexVortex
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
