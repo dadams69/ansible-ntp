@@ -1,7 +1,7 @@
 mamercad.ntp
 ============
 
-Sets up NTP on RHEL/CentOS
+Removes Openntp and Sets up NTP on RHEL/CentOS
 
 Requirements
 ------------
@@ -24,7 +24,7 @@ Example Playbook
     - hosts:
         - centos
       roles:
-        - mamercad.ntp
+        - ansible-ntp
 
 License
 -------
@@ -34,6 +34,7 @@ GPLv3
 Author Information
 ------------------
 
-Mark Mercado <mamercad@umflint.edu>
+forked from Mark Mercado <mamercad@umflint.edu>
+Changes made from Don Adams <dadams@nexvortex.com>
 
 
