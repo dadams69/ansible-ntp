@@ -3,19 +3,40 @@
 
 - name: remove sendmail
   yum: name=sendmail state=absent
-
+  - template: src=/files/postfix.main.cf.j2 dest=/etc/file.conf owner=bin group=wheel mode=0644
+  register: result
+    ignore_errors: True
+    
 - name: install postfix
   yum: name=postfix state=present
-
+  register: result
+    ignore_errors: True
+  
 - name: start and enable postfix
   service: name=postfix state=started enabled=yes
-
+  register: result
+    ignore_errors: True
+    
 - name: remove ntp
   yum: name=ntp state=absent
-
+  register: result
+    ignore_errors: True
+    
 - name: install openntp
   yum: name=openntp state=present
-
+  register: result
+    ignore_errors: True
+    
 - name: start and enable ntpd
   service: name=openntpd state=started enabled=yes
+  register: result
+    ignore_errors: True
+    
+  - debug: msg="it changed"
+    when: result|changed
 
+  - debug: msg="it succeeded"
+    when: result|succeeded
+
+  - debug: msg="it was skipped"
+    when: result|skipped
