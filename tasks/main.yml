@@ -1,11 +1,11 @@
 ---
 # tasks file for ansible-ntp
 
-- name: remove openntp
-  yum: name=openntp state=absent
+- name: remove ntp
+  yum: name=ntp state=absent
 
-- name: install ntp
-  yum: name=ntp state=present
+- name: install openntp
+  yum: name=openntp state=present
 
 - name: start and enable ntpd
   service: name=ntpd state=started enabled=yes
