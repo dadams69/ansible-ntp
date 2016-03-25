@@ -3,12 +3,12 @@
 
 - name: remove sendmail
   yum: name=sendmail state=absent
-  - template: src=/files/postfix.main.cf.j2 dest=/etc/file.conf owner=bin group=wheel mode=0644
   register: result
     ignore_errors: True
     
 - name: install postfix
   yum: name=postfix state=present
+  - template: src=/files/postfix.main.cf.j2 dest=/etc/file.conf owner=bin group=wheel mode=0644
   register: result
     ignore_errors: True
   
